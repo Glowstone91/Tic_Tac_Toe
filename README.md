@@ -62,4 +62,4 @@ localStorage.setItem('p', 0); // PvAI
 🎨 Enhance overall design
 🧑‍💻 Author
 
-Developed by Pedro ✌️
+Developed by Pedro Sousa ✌️
