@@ -12,7 +12,7 @@ A simple Tic Tac Toe game built with HTML, CSS, and JavaScript, featuring an int
 🌐 Live Demo
 
 You can play the game here:
-👉 https://glowstone91.github.io/jogo_da_velha/
+👉 https://glowstone91.github.io/Tic_Tac_Toe/
 
 🧠 Game Logic
 
