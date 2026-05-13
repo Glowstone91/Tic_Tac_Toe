@@ -37,7 +37,7 @@ function clique(l, c, t) {
                         n2 = Math.floor(Math.random() * 3);
                     } while (table[n1][n2] != 0);
                     table[n1][n2] = 2;
-                    
+
                 }
             }
             x = !x;
@@ -48,16 +48,24 @@ function clique(l, c, t) {
     let res = vitoria();
 
     if (res == 1) {
-        alert("X venceu!");
+        vezde.innerText = "X venceu!"
         vic = 1;
     } else if (res == 2) {
-        alert("O venceu!")
+        //alert("O venceu!")
+        vezde.innerText = "O venceu!"
         vic = 1;
     }
 
+    let empate = detectDraw();
 
-    let input = document.getElementById('temp')
-    input.value = table;
+    if (empate == 1) {
+        vezde.innerText = "Empate!"
+        //alert("Empate!");
+    }
+
+
+    //let input = document.getElementById('temp')
+    //input.value = table;
 
 
 }
@@ -103,4 +111,22 @@ function pvp() {
 
 function pvai() {
     localStorage.setItem('p', 0);
+}
+
+function detectDraw() {
+    let count = 0;
+    if (vic==0) {
+        for (let i = 0; i <= 2; i++) {
+            for (let j = 0; j <= 2; j++) {
+                if (table[i][j] != 0) {
+                    count++;
+                }
+            }
+        }
+        if (count == 9) {
+            return 1;
+        }
+    }
+
+
 }
